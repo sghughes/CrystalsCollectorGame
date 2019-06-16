@@ -4,8 +4,8 @@ var crystal1; //value per game should be randomly generated between 1-12
 var crystal2;
 var crystal3;
 var crystal4;
-var wins; //increase by 1 when totalScore = gameNumber
-var losses; //increase by 1 when totalScore > gameNumber
+var wins = 0; //increase by 1 when totalScore = gameNumber
+var losses = 0; //increase by 1 when totalScore > gameNumber
 var gameNumber; //value per game should be randomly generated between 19-120
 var totalScore = 0; //increases by value of crystal when that crystal is clicked
 
@@ -25,29 +25,80 @@ function start(){
     console.log('crystal 1 number: ' + crystal3)
     console.log('crystal 1 number: ' + crystal4)
     $('.currentScore').html(totalScore);
+    $('.winsHTML').html('Wins: '+ wins);
+    $('.lossesHTML').html('Losses: ' + losses);
 }
 
 function play(){
+    
     $('.crystalImage1').on('click',function()
     {
         totalScore+= crystal1;
         console.log(totalScore);
+        if(totalScore<gameNumber){
+            $('.currentScore').html(totalScore);
+        }
+        if(totalScore>gameNumber){
+            console.log('you lost');
+            losses++;
+            $('.lossesHTML').html('Losses: ' + losses);
+            totalScore = 0;
+            start();
+        }
     })
+
     $('.crystalImage2').on('click',function()
     {
         totalScore+= crystal2;
         console.log(totalScore);
+        if(totalScore<gameNumber){
+            $('.currentScore').html(totalScore);
+        }
+        if(totalScore>gameNumber){
+            console.log('you lost');
+            losses++;
+            $('.lossesHTML').html('Losses: ' + losses);
+            totalScore = 0;
+            start();
+        }
     })
+
     $('.crystalImage3').on('click',function()
     {
         totalScore+= crystal3;
         console.log(totalScore);
+        if(totalScore<gameNumber){
+            $('.currentScore').html(totalScore);
+        }
+        if(totalScore>gameNumber){
+            console.log('you lost');
+            losses++;
+            $('.lossesHTML').html('Losses: ' + losses);
+            totalScore = 0;
+            start();
+        }
     })
+
     $('.crystalImage4').on('click',function()
     {
         totalScore+= crystal4;
         console.log(totalScore);
+        if(totalScore<gameNumber){
+            $('.currentScore').html(totalScore);
+        }
+        if(totalScore>gameNumber){
+            console.log('you lost');
+            losses++;
+            $('.lossesHTML').html('Losses: ' + losses);
+            totalScore = 0;
+            start();
+        }
     })
+    
+
+    
+   
+    
 }
 
 //Process
