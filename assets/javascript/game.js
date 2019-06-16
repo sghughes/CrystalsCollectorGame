@@ -13,6 +13,7 @@ var totalScore; //increases by value of crystal when that crystal is clicked
 function start(){
     gameNumber = Math.floor(Math.random()*120)+19;
     console.log('current game number is: ' + gameNumber);
+    $('.randomGameNumber').html(gameNumber);
     crystal1 = Math.floor(Math.random()*12)+1;
     crystal2 = Math.floor(Math.random()*12)+1;
     crystal3 = Math.floor(Math.random()*12)+1;
@@ -22,6 +23,8 @@ function start(){
     console.log('crystal 1 number: ' + crystal3)
     console.log('crystal 1 number: ' + crystal4)
 }
+
+//Process
 start();
 //start function: gameNumber and crystal numbers randomly generated. Total score is 0. display game number and total score.
 //play function: when crystal clicked, add crystal value to total score. Check if total score = or > gameNumber. Display total score.
