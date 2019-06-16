@@ -1,5 +1,5 @@
 
-//Variables
+//Variables:
 var crystal1; //value per game should be randomly generated between 1-12
 var crystal2;
 var crystal3;
@@ -7,9 +7,11 @@ var crystal4;
 var wins; //increase by 1 when totalScore = gameNumber
 var losses; //increase by 1 when totalScore > gameNumber
 var gameNumber; //value per game should be randomly generated between 19-120
-var totalScore; //increases by value of crystal when that crystal is clicked
+var totalScore = 0; //increases by value of crystal when that crystal is clicked
 
-//functions
+//functions:
+
+//start function: gameNumber and crystal numbers randomly generated. Total score is 0. display game number and total score.
 function start(){
     gameNumber = Math.floor(Math.random()*120)+19;
     console.log('current game number is: ' + gameNumber);
@@ -22,11 +24,36 @@ function start(){
     console.log('crystal 1 number: ' + crystal2)
     console.log('crystal 1 number: ' + crystal3)
     console.log('crystal 1 number: ' + crystal4)
+    $('.currentScore').html(totalScore);
+}
+
+function play(){
+    $('.crystalImage1').on('click',function()
+    {
+        totalScore+= crystal1;
+        console.log(totalScore);
+    })
+    $('.crystalImage2').on('click',function()
+    {
+        totalScore+= crystal2;
+        console.log(totalScore);
+    })
+    $('.crystalImage3').on('click',function()
+    {
+        totalScore+= crystal3;
+        console.log(totalScore);
+    })
+    $('.crystalImage4').on('click',function()
+    {
+        totalScore+= crystal4;
+        console.log(totalScore);
+    })
 }
 
 //Process
 start();
-//start function: gameNumber and crystal numbers randomly generated. Total score is 0. display game number and total score.
+play();
+
 //play function: when crystal clicked, add crystal value to total score. Check if total score = or > gameNumber. Display total score.
 
 //Randomly generated number at start of game
