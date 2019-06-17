@@ -15,7 +15,7 @@ var totalScore = 0; //increases by value of crystal when that crystal is clicked
 function start(){
     gameNumber = Math.floor(Math.random()*120)+19;
     console.log('current game number is: ' + gameNumber);
-    $('.randomGameNumber').html(gameNumber);
+    $('.randomGameNumber').html('Random Number: ' + gameNumber);
     crystal1 = Math.floor(Math.random()*12)+1;
     crystal2 = Math.floor(Math.random()*12)+1;
     crystal3 = Math.floor(Math.random()*12)+1;
@@ -45,12 +45,14 @@ function play(){
             console.log('you lost');
             losses++;
             $('.lossesHTML').html('Losses: ' + losses);
+            $('.gameResultAlert').html('You lose!');
             totalScore = 0;
             start();
         }
         else{
             wins++;
             $('.winsHTML').html('Wins: ' + wins);
+            $('.gameResultAlert').html('You win!');
             totalScore = 0;
             start();
         }
@@ -70,12 +72,14 @@ function play(){
             console.log('you lost');
             losses++;
             $('.lossesHTML').html('Losses: ' + losses);
+            $('.gameResultAlert').html('You lose!');
             totalScore = 0;
             start();
         }
         else{
             wins++;
             $('.winsHTML').html('Wins: ' + wins);
+            $('.gameResultAlert').html('You win!');
             totalScore = 0;
             start();
         }
@@ -92,12 +96,14 @@ function play(){
             console.log('you lost');
             losses++;
             $('.lossesHTML').html('Losses: ' + losses);
+            $('.gameResultAlert').html('You lose!');
             totalScore = 0;
             start();
         }
         else{
             wins++;
             $('.winsHTML').html('Wins: ' + wins);
+            $('.gameResultAlert').html('You win!');
             totalScore = 0;
             start();
         }
@@ -114,12 +120,14 @@ function play(){
             console.log('you lost');
             losses++;
             $('.lossesHTML').html('Losses: ' + losses);
+            $('.gameResultAlert').html('You lose!');
             totalScore = 0;
             start();
         }
         else{
             wins++;
             $('.winsHTML').html('Wins: ' + wins);
+            $('.gameResultAlert').html('You win!');
             totalScore = 0;
             start();
         }
