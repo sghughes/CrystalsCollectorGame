@@ -4,4 +4,4 @@ You will be given a random number at the start of the game. There are four cryst
 
 Good luck!
 
-https://sghughes.github.io/unit-4-game/
+https://sghughes.github.io/CrystalsCollectorGame/
